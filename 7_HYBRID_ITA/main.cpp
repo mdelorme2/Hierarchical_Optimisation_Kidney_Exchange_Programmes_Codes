@@ -60,7 +60,7 @@ int main(int argc, char **argv){
 		}
 		if(i == 1){
 			if(picefLP(allo) == -1){
-				allo.fails[1]++; i = -1; back0 = true; currFail1 = 0;
+				allo.fails[1]++; i = -1; back0 = true; currFail1 = 0; continue;
 			}
 			else{
 				allo.sols[1] = floor(allo.tObjs[1] + EPSILON);
