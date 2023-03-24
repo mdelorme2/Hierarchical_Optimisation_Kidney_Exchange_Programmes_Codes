@@ -57,7 +57,7 @@ int main(int argc, char **argv){
 			}
 			else{
 				if(cycleLP(allo) == -1){
-					allo.fails[1]++; i = -1; back0 = true; currFail1 = 0; allo.objs.resize(1);
+					allo.fails[1]++; i = -1; back0 = true; currFail1 = 0; continue;
 				}
 				else{ 
 					allo.sols[1] = ceil(allo.tObjs[1] - EPSILON);
@@ -95,10 +95,10 @@ int main(int argc, char **argv){
 		}
 		if(i == 2){
 			if(cycleLP(allo) == -1){
-				allo.fails[2]++; i = 0; back1 = true; currFail2 = 0;
+				allo.fails[2]++; i = 0; back1 = true; currFail2 = 0; continue;
 			}
 			else{
-				allo.sols[2] = ceil(allo.tObjs[i] - EPSILON);
+				allo.sols[2] = ceil(allo.tObjs[2] - EPSILON);
 				for(;;){
 					if(getCPUTime() - initTimeModelCPU > 36000){allo.objs[2] = -1; allo.infos.opt = false; break;}
 					cout << "Sol0 is at " << allo.sols[0] << endl;
